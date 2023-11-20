@@ -6,6 +6,10 @@
 
 This is an app that is a progressive web application using React with a Test Driven development technique, using the Google Calendar Api to fetch upcoming events.
 
+## Usage
+
+With this Meet app, serverless functions are a prime foundation in making this application possible. It will be accessing the Google Calendar API, as well as using AWS Lambda for the cloud service provider. Users will have to be authorized in order to retrieve the given data within the app. Overall, being that this app is built with serverless functions, it will be more beneficial and efficient than other alternatives for creating a similar app. The serverless functions will also be making access tokens to provide more security to the app.
+
 ## Features
 
 ### Feature 1: Filter events by City
