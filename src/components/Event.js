@@ -1,19 +1,17 @@
 import { useState } from "react";
+import mockData from "../mock-data";
+import { getEvents } from "../api";
 
 const Event = ({ event }) => {
   const [isDetailsOpen, setIsDetailsOpen] = useState(false);
 
-  const isoDateString = event.created;
-  const isoDate = new Date(isoDateString);
-
-  const options = { year: "numeric", month: "long", day: "numeric" };
-  const readableDate = isoDate.toLocaleString(undefined, options);
+  const eventDate = new Date(event.created).toDateString();
 
   return (
     <li className="event">
       <div className="event-title">{event.summary}</div>
       <div className="event-infos">
-        <div>{readableDate}</div>
+        <div>{eventDate}</div>
         <div>{event.location}</div>
       </div>
       {isDetailsOpen ? (
