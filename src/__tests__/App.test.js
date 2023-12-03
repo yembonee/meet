@@ -14,4 +14,8 @@ describe("App /> Component", () => {
   test("render CitySearch", () => {
     expect(AppDOM.querySelector("#city-search")).toBeInTheDocument();
   });
+
+  test("render NumberofEvents", () => {
+    expect(AppDOM.querySelector("#number-of-events")).toBeInTheDocument();
+  });
 });

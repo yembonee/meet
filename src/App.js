@@ -1,12 +1,17 @@
+import "./App.css";
 import CitySearch from "./components/CitySearch";
 import EventList from "./components/EventList";
-import "./App.css";
+import NumberOfEvents from "./components/NumberOfEvents";
+import { useState, useEffect } from "react";
 
 const App = () => {
+  const [events, setEvents] = useState([]);
+
   return (
     <div className="App">
-      <EventList />
       <CitySearch />
+      <NumberOfEvents />
+      <EventList events={events} />
     </div>
   );
 };
