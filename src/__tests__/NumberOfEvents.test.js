@@ -5,7 +5,9 @@ import NumberOfEvents from "../components/NumberOfEvents";
 describe("<NumberOfEvents /> component", () => {
   let NumberOfEventsComponent;
   beforeEach(() => {
-    NumberOfEventsComponent = render(<NumberOfEvents />);
+    NumberOfEventsComponent = render(
+      <NumberOfEvents setCurrentNOE={() => {}} />
+    );
   });
 
   test("renders number of events text input", () => {
@@ -14,15 +16,14 @@ describe("<NumberOfEvents /> component", () => {
     expect(numberTextBox).toHaveClass("number-of-events-input");
   });
 
-  test("default number is 32", async () => {
+  test("default number is 32", () => {
     const numberTextBox = NumberOfEventsComponent.queryByRole("textbox");
     expect(numberTextBox).toHaveValue("32");
   });
 
   test("text box value changes when the user types", async () => {
-    const user = userEvent.setup();
     const numberTextBox = NumberOfEventsComponent.queryByRole("textbox");
-    await user.type(numberTextBox, "123");
-    expect(numberTextBox).toHaveValue("32123");
+    await userEvent.type(numberTextBox, "{backspace}{backspace}10");
+    expect(numberTextBox).toHaveValue("10");
   });
 });

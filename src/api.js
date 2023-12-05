@@ -36,7 +36,9 @@ export const getAccessToken = async () => {
     const searchParams = new URLSearchParams(window.location.search);
     const code = await searchParams.get("code");
     if (!code) {
-      const response = await fetch("YOUR_REVERLESS_GET_AUTH_URL_ENDPOINT");
+      const response = await fetch(
+        "https://8z9ugpov36.execute-api.eu-central-1.amazonaws.com/dev/api/get-auth-url"
+      );
       const result = await response.json();
       const { authUrl } = result;
       return (window.location.href = authUrl);
