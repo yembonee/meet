@@ -1,4 +1,9 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:500);
+
+html {
+  background-color: rgb(225, 251, 255);
+}
+
 .App {
   text-align: center;
   padding: 2% 5%;
@@ -6,6 +11,13 @@
 
 .App * {
   box-sizing: border-box;
+}
+
+header {
+  padding-bottom: 20px;
+  margin: 20px;
+  font-size: x-large;
+  font-weight: bold;
 }
 
 ul {
@@ -34,11 +46,34 @@ input[type="number"] {
   width: 250px;
 }
 
+.search-elements {
+  display: grid;
+  grid-template-columns: auto auto;
+  column-gap: 35px;
+  max-width: 2000px;
+  text-align: center;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+}
+
 #city-search {
-  display: flex;
-  flex-direction: column;
-  margin: auto;
   position: relative;
+}
+
+#event-list {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  column-gap: 35px;
+  row-gap: 35px;
+}
+
+#city-grid-item {
+  max-width: 700px;
+  min-width: 400px;
+  max-height: 250px;
+  border: black;
+  border-radius: 10px;
 }
 
 .suggestions {
@@ -70,19 +105,21 @@ input[type="number"] {
 
 .event {
   padding: 10px 10px 35px;
-  margin-bottom: 10px;
   text-align: left;
-  border: 1px solid #ccc;
+  border: 3px solid #adadad;
   border-radius: 4px;
   position: relative;
+  background-color: #f3f3f3;
 }
 
 .details-btn {
   position: absolute;
   right: 5px;
-  bottom: 5px;
   padding: 5px 8px;
   border-radius: 4px;
   outline: none;
   cursor: pointer;
+  background-color: rgb(225, 251, 255);
+  border: 1px solid black;
+  font-weight: bold;
 }

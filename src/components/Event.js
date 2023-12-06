@@ -6,7 +6,7 @@ const Event = ({ event }) => {
     setShowDetails(!showDetails);
   };
   return (
-    <li>
+    <li id="city-grid-item">
       <div className="event">
         <h2>{event.summary}</h2>
         <div className="location">{event.location}</div>
