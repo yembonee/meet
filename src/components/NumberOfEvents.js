@@ -1,5 +1,3 @@
-import { useState } from "react";
-
 const NumberOfEvents = ({ setCurrentNOE }) => {
   const handleInputChanged = (event) => {
     const value = event.target.value;
