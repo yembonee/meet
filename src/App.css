@@ -46,6 +46,14 @@ input[type="number"] {
   width: 250px;
 }
 
+.alerts-container {
+  position: fixed;
+  top: 0px;
+  left: 20px;
+  width: 250px;
+  z-index: 1000;
+}
+
 .search-elements {
   display: grid;
   grid-template-columns: auto auto;
