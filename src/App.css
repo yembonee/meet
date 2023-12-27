@@ -13,13 +13,6 @@ html {
   box-sizing: border-box;
 }
 
-header {
-  padding-bottom: 20px;
-  margin: 20px;
-  font-size: x-large;
-  font-weight: bold;
-}
-
 ul {
   padding: 0;
   list-style: none;
@@ -40,6 +33,7 @@ input[type="number"] {
   align-self: center;
   height: 38px;
   margin-bottom: 20px;
+  color: #1e1a3b;
 }
 
 .city {
@@ -54,18 +48,10 @@ input[type="number"] {
   z-index: 1000;
 }
 
-.search-elements {
-  display: grid;
-  grid-template-columns: auto auto;
-  column-gap: 35px;
-  max-width: 2000px;
-  text-align: center;
-  align-items: center;
-  align-content: center;
-  justify-content: center;
-}
-
 #city-search {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
   position: relative;
 }
 

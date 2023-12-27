@@ -31,22 +31,20 @@ const App = () => {
 
   return (
     <div className="App">
-      <header>City and Event Search</header>
       <div className="alerts-container">
         {infoAlert.length ? <InfoAlert text={infoAlert} /> : null}
-        {errorAlert.length ? <ErrorAlert text={errorAlert} /> : null}
+        {ErrorAlert.length ? <ErrorAlert text={errorAlert} /> : null}
       </div>
-      <div className="search-elements">
-        <CitySearch
-          allLocations={allLocations}
-          setCurrentCity={setCurrentCity}
-          setInfoAlert={setInfoAlert}
-        />
-        <NumberOfEvents
-          setCurrentNOE={setCurrentNOE}
-          setErrorAlert={setErrorAlert}
-        />
-      </div>
+
+      <CitySearch
+        allLocations={allLocations}
+        setCurrentCity={setCurrentCity}
+        setInfoAlert={setInfoAlert}
+      />
+      <NumberOfEvents
+        setCurrentNOE={setCurrentNOE}
+        setErrorAlert={setErrorAlert}
+      />
       <EventList events={events} />
     </div>
   );

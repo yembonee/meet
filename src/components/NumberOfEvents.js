@@ -1,7 +1,18 @@
-const NumberOfEvents = ({ setCurrentNOE }) => {
+import React, { useState } from "react";
+
+const NumberOfEvents = ({ setCurrentNOE, setErrorAlert }) => {
   const handleInputChanged = (event) => {
     const value = event.target.value;
     setCurrentNOE(value);
+
+    let errorText;
+    if (isNaN(value) || value <= 0) {
+      errorText = "Please enter a valid number greater than 0.";
+      setErrorAlert(errorText);
+    } else {
+      setErrorAlert(errorText);
+      setCurrentNOE(value);
+    }
   };
 
   return (

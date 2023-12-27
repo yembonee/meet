@@ -59,9 +59,9 @@ defineFeature(feature, (test) => {
       "the number of events displayed will update to the number the user selected",
       () => {
         const AppDOM = AppComponent.container.firstChild;
-        const eventList = within(AppDOM).queryAllByRole("listitem");
+        const eventNewList = within(AppDOM).queryAllByRole("listitem");
 
-        expect(eventList.length).toEqual(10);
+        expect(eventNewList.length).toEqual(10);
       }
     );
   });
