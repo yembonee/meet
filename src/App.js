@@ -3,7 +3,7 @@ import CitySearch from "./components/CitySearch";
 import EventList from "./components/EventList";
 import NumberOfEvents from "./components/NumberOfEvents";
 import { useState, useEffect } from "react";
-import { InfoAlert, ErrorAlert } from "./components/Alert";
+import { InfoAlert, ErrorAlert, WarningAlert } from "./components/Alert";
 
 import "./App.css";
 
@@ -14,6 +14,7 @@ const App = () => {
   const [currentCity, setCurrentCity] = useState("See all cities");
   const [infoAlert, setInfoAlert] = useState("");
   const [errorAlert, setErrorAlert] = useState("");
+  const [warningAlert, setWarningAlert] = useState("");
 
   const fetchData = async () => {
     const allEvents = await getEvents();
@@ -26,6 +27,11 @@ const App = () => {
   };
 
   useEffect(() => {
+    if (navigator.onLine) {
+      setWarningAlert("");
+    } else {
+      setWarningAlert("You are currently in offline mode");
+    }
     fetchData();
   }, [currentCity, currentNOE]);
 
@@ -34,6 +40,7 @@ const App = () => {
       <div className="alerts-container">
         {infoAlert.length ? <InfoAlert text={infoAlert} /> : null}
         {ErrorAlert.length ? <ErrorAlert text={errorAlert} /> : null}
+        {WarningAlert.length ? <WarningAlert text={warningAlert} /> : null}
       </div>
 
       <CitySearch
