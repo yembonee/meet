@@ -1,7 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:500);
 
 html {
-  background-color: rgb(225, 251, 255);
+  background-color: rgb(218, 238, 241);
 }
 
 .App {
@@ -48,7 +48,8 @@ input[type="number"] {
   z-index: 1000;
 }
 
-#city-search {
+#city-search,
+#number-of-events {
   display: flex;
   flex-direction: column;
   margin: auto;
@@ -56,18 +57,25 @@ input[type="number"] {
 }
 
 #event-list {
-  display: grid;
-  grid-template-columns: auto auto auto;
-  column-gap: 35px;
-  row-gap: 35px;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px;
+  margin: 0 auto;
+  list-style-type: none;
+  max-width: 1100px;
+  position: relative;
+  gap: 23px;
 }
 
 #city-grid-item {
-  max-width: 700px;
-  min-width: 400px;
-  max-height: 250px;
-  border: black;
-  border-radius: 10px;
+  position: relative;
+  min-height: 150px; /* Reserve space for dynamic content */
+  border: 3px solid #6b6b6b;
+  border-radius: 4px;
+  margin-bottom: 35px;
+  padding: 10px;
+  background-color: rgb(170, 239, 250);
+  box-shadow: 10px 10px 16px -12px rgba(0, 0, 0, 0.75);
 }
 
 .suggestions {
@@ -100,10 +108,9 @@ input[type="number"] {
 .event {
   padding: 10px 10px 35px;
   text-align: left;
-  border: 3px solid #adadad;
   border-radius: 4px;
   position: relative;
-  background-color: #f3f3f3;
+  background-color: rgb(170, 239, 250);
 }
 
 .details-btn {
@@ -113,7 +120,7 @@ input[type="number"] {
   border-radius: 4px;
   outline: none;
   cursor: pointer;
-  background-color: rgb(225, 251, 255);
+  background-color: rgb(167, 209, 226);
   border: 1px solid black;
   font-weight: bold;
 }
