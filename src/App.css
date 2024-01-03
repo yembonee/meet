@@ -78,6 +78,18 @@ input[type="number"] {
   box-shadow: 10px 10px 16px -12px rgba(0, 0, 0, 0.75);
 }
 
+.charts-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+@media screen and (max-width: 768px) {
+  .charts-container {
+    grid-template-columns: 1fr;
+    display: grid;
+  }
+}
+
 .suggestions {
   width: 250px;
   position: absolute;
