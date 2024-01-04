@@ -1,7 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:500);
 
 html {
-  background-color: rgb(218, 238, 241);
+  background-color: #f6eeff;
 }
 
 .App {
@@ -70,12 +70,12 @@ input[type="number"] {
 #city-grid-item {
   position: relative;
   min-height: 150px; /* Reserve space for dynamic content */
-  border: 3px solid #6b6b6b;
+  border: 3px solid #46296918;
   border-radius: 4px;
   margin-bottom: 35px;
   padding: 10px;
-  background-color: rgb(170, 239, 250);
-  box-shadow: 10px 10px 16px -12px rgba(0, 0, 0, 0.75);
+  background-color: #e9d6ff;
+  box-shadow: 10px 10px 16px -12px #9557e1;
 }
 
 .charts-container {
@@ -114,7 +114,7 @@ input[type="number"] {
 }
 
 .suggestions > li:hover {
-  background-color: #bcdcdb;
+  background-color: #d0a7ff;
 }
 
 .event {
@@ -122,7 +122,7 @@ input[type="number"] {
   text-align: left;
   border-radius: 4px;
   position: relative;
-  background-color: rgb(170, 239, 250);
+  background-color: #e9d6ff;
 }
 
 .details-btn {
@@ -132,7 +132,7 @@ input[type="number"] {
   border-radius: 4px;
   outline: none;
   cursor: pointer;
-  background-color: rgb(167, 209, 226);
+  background-color: #d0a7ff;
   border: 1px solid black;
   font-weight: bold;
 }
